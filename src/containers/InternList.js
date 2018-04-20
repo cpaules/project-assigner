@@ -11,7 +11,7 @@ const InternList = ({ interns, dispatch, temp }) => (
         {...intern}
         onClick={() => {
           const lastTemp = temp[temp.length - 1]
-          dispatch(addProjectToIntern(lastTemp, intern.id))
+          lastTemp ? dispatch(addProjectToIntern(lastTemp, intern.id)) : true   
         }}
       />
     )}
